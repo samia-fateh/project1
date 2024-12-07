@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header{
+    width: 100%;
+    height:60px;
+    background-color: rgba(248, 194, 94, 0.6);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+.header_i,.welcome_item:hover .welcome_title,.what_item:hover .what_title,.numbers_p,.numbers_title,.engineers_title,.team_item:hover .team_title,.news_item:hover .news_title,.header_list li a,.home_main_title,.home_btn1,.featured_p,.team_a,.contact_info a{
+    color: white;
+}
+.header_input{
+    border-radius: 30px;
+    height: 33px;
+    border: none;
+    margin-left: 20px;
+   position: absolute;
+} 
+.header_list{
+    list-style: none;
+    float: right;
+    margin-right: 30px;
+}
+.header_list li {
+    display: inline-block;
+    margin-left: 23px;
+    font-size: 27px;
+    text-transform: capitalize;
+}
+.header_list li a{
+    text-decoration: none;
+}
+.i1{
+    position: absolute;
+    font-size: 17px;
+    padding: 7px 40px;
+}
+.home{
+    background-image: url(../images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsb2ZmaWNlN19waG90b19vZl9mcmVzaF9wZXJmdW1lX25hdHVyYWxfbGlnaHRfcmVhbF9waG90b19hOGQ2ZjNjZS04YWVjLTQ3YzEtODlmZi1lYzEzZjIwYjBiZjFfMS5qcGc.jpg);
+    background-size: cover;
+    position: relative;
+}
+.home_overlay,.team_overlay{
+    background-color: rgb(0, 0, 0,.4); 
+}
+.home_overlay,.team_overlay,.featured_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.featured_overlay{
+    text-align: center;
+    padding: 20px 15px;
+}
+.team_overlay{
+    visibility: hidden;
+}
+.home_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.home_main_title{
+    text-transform:uppercase ;
+    font-size: 65px;
+    padding: 10px 0px;
+}
+.home_p{
+    color: rgb(181, 178, 178);
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+.home_btn{
+    width:140px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+.home_btn1,.contact_info a{
+    background-color: rgb(67, 67, 202);
+}
+.home_btn:hover{
+    opacity: .5;
+} 
+li::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2;
+    background-color: rgb(42, 42, 224);
+    margin-top: 40px;
+}
+li:hover::after{
+    width: 100%;
+    height: 2;
+    transition: all .5s;
+}
+ li{
+    position: relative;
+}
+.welcome,.home,.featured,.what_offer,.why_us,.pricing,.team,.news{
+    width: 100%;
+    height: 100vh;
+}
+.welcome_item{
+    width: 340px;
+    height: 248px;
+    float: left;
+    margin-left: 120px;
+    border: 1px,solid,rgb(253, 228, 182);
+    border-radius: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+}
+.welcome_title{
+    font-size:30px;
+}
+.welcome_p{
+    color: rgb(161, 161, 161);
+    padding: 20px 0px;
+}
+.welcome_a{
+    text-decoration: none;
+    color:rgb(78, 78, 251);
+}
+.welcome_i{
+    color: rgb(233, 190, 110);
+    font-size: 30px;
+    padding: 15px 0px;
+}
+.pricing_item::after,.team_item::after,.news_item::after{
+    right: 0;
+    width: 100%;
+    height: 0;
+    transition: all 1s;
+}
+.welcome_item::after,.what_item::after,.pricing_item::after,.team_item::after,.news_item::after{
+    content:"";
+    position: absolute;
+    top: 0px;
+}
+.welcome_item::after,.what_item::after{
+    width: 0px;
+    left: 0px;
+    height: 0;
+}
+.pricing_item:hover:after,.team_item:hover::after,.news_item:hover::after,.welcome_item:hover::after,.what_item:hover::after{
+    width:100% ;
+    height: 100%;
+    background-color: rgba(241, 217, 174, 0.5);
+}
+.welcome_item:hover::after,.what_item:hover::after{
+    transition: all 1s;
+}
+.welcome_item:hover .welcome_p,.what_item:hover .what_p{
+    color: black;
+}
+.welcome_item:hover .welcome_i{
+    color: rgb(219, 155, 36);
+}
+.featured,.contact{
+    background-color: rgb(249, 238, 220);
+}
+.featured_main_title,.welcome_main_title,.what_main_title,.pricing_main_title,.team_main_title,.news_main_title{
+    text-align: center;
+    padding: 60px 0px;
+    text-transform: capitalize;
+    font-size: 45px;
+}
+.featured_line,.welcome_line,.what_line,.why_line,.pricing_line,.team_line,.news_line{
+    width: 90px;
+    height: 4px;
+    background-color:rgb(53, 53, 254);
+}
+.featured_line,.welcome_line,.what_line,.pricing_line,.team_line,.news_line{
+    margin: auto;
+    margin-top: -50px;
+}
+.featured_line,.welcome_line,.pricing_line,.team_line,.news_line{
+    margin-bottom: 70px;
+}
+.featured_content,.what_content,.welcome_content,.why_content,.numbers_content,.pricing_content,.team_content{
+    overflow: auto;
+}
+.item1,.item4{
+    margin-left: 260px;
+}
+.featured_item{
+    width: 300px;
+    height: 200px;
+    float: left;
+    text-align: center;
+    background-size: cover;
+    padding: 20px 15px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.item2,.item5{
+    margin: 0px 30px;
+}
+.item1{
+    background-image: url(../images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsb2ZmaWNlN19waG90b19vZl9mcmVzaF9wZXJmdW1lX25hdHVyYWxfbGlnaHRfcmVhbF9waG90b19hOGQ2ZjNjZS04YWVjLTQ3YzEtODlmZi1lYzEzZjIwYjBiZjFfMS5qcGc.jpg);
+}
+.item2{
+    background-image: url(../images/pngtree-perfume-flowers-floral-background-image_2454622.jpg);
+}
+.item3{
+    background-image: url(../images/R.jpeg);
+}
+.item4{
+    background-image: url(../images/summer-perfume-GettyImages-1469493119-6b1230e5bab346fc9d49811904070693.jpg);
+}
+.item5{
+   background-image: url(../images/perfume-8293577_960_720.webp)
+}
+.item6{
+    background-image: url(../images/OIP\ \(1\).jpeg);
+}
+.featured_overlay:hover{
+    background-color: rgb(0, 0, 0,.5);
+}
+.featured_item .featured_title,.featured_item .featured_p,.featured_item .heart,.featured_item .pinterest{
+    visibility: hidden;
+}
+.featured_item:hover .featured_title,.featured_item:hover .featured_p,.featured_item:hover .heart,.featured_item:hover .pinterest{
+    visibility: visible;
+}
+.featured_p{
+    line-height: 60px;
+}
+.featured_title{
+    text-transform: uppercase;
+    color: rgb(161, 161, 161);
+}
+.heart,.pinterest{
+    color: rgb(161, 161, 161);
+    background-color: white;
+    border-radius: 5px;
+    width: 36px;
+    height: 26px;
+    cursor: pointer;
+}
+ .what_line{
+    margin-bottom: 30px;
+}
+.what_item{
+    width:400px ;
+    height: 270px;
+    float: left;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    padding: 30px 30px;
+    border: 1px solid rgb(253, 228, 182);
+    overflow: auto; 
+}
+.itemcontent1{
+    margin-left: 120px;
+}
+.itemcontent2{
+    margin:0px 50px ;
+}
+.what_title{
+    text-transform: capitalize;
+}
+.what_p{ 
+   color: rgb(176, 174, 174);
+   padding: 15px 0px;
+}
+.what_item{
+    position: relative;
+    overflow: auto;
+} 
+.what_info{
+    width: 85%;
+    float: left;
+}
+.what_icon{
+    width: 15%;
+    float: left;
+    font-size: 30px;
+    color: rgb(249, 212, 144);
+}
+.what_item:hover .what_icon{
+    color: rgb(243, 187, 84);
+}
+.why_info{
+    width: 680px;
+    height: 490px;
+    float:left;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 60px 25px;
+}
+.why_img{
+    width: 380px;
+    height: 490px;
+    float: left;
+}
+.why_content{
+   padding: 140px 0px 0px 0px ;
+}
+.why_title{
+    text-transform: capitalize;
+    font-size: 45px;
+}
+.why_line{
+    margin-top: 8px;
+}
+.why_main_p{
+    color: rgb(192, 188, 188);
+    padding: 30px 0px;
+}
+.why_p{
+    padding: 15px 0px;
+}
+.check{
+    color:rgb(53, 53, 254);
+}
+.why_span{
+    color: rgb(149, 145, 145);
+}
+.why_img{
+    background-image: url(../images/a6198db0-73f4-49c5-ab17-3a5015e33da2.jpeg);
+    background-size: cover;
+}
+.why_ul{
+    overflow: auto;
+    margin-top: 5px;
+    list-style: none;
+    margin-left: 1150px;
+}
+.li{
+   background-color:rgb(53, 53, 254) ;
+}
+.li1,.li2{
+    background-color: rgb(185, 183, 183);
+}
+.li1:hover,.li2:hover{
+    background-color: rgb(53, 53, 254);
+}
+.why_ul .why_li{
+    width: 15px;
+    height: 15px;
+   border-radius: 50%;
+    float: left;
+    margin: 8px;
+ }
+.numbers,.engineers,.contact{
+    width: 100%;
+    height: 50vh;
+}
+.numbers,.engineers{
+    background-attachment: fixed;
+    background-size:cover;
+}
+.numbers{
+    background-image: url(../images/ai-generated-perfume-glass-bottle-table-with-flowers-background_423614-3387.avif);
+}
+.numbers_item{
+    width:20%;
+    margin-left: 43px;
+    float: left;
+    text-align: center;
+}
+.numbers_content,.engineers_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.numbers_content{
+    width: 80%;
+}
+.numbers,.engineers{
+    position: relative;
+}
+.numbers_icon{
+    font-size: 40px;
+    color: rgb(235, 181, 82);
+}
+.numbers_title{
+    padding: 15px 0px 4px 0px;
+}
+.pricing_item{
+    width:370px;
+    height: 450px;
+    float: left;
+    border-radius: 15px;
+    border: 1px solid rgb(253, 228, 182) ;
+    text-align: center;
+    padding: 33px 20px;
+    position: relative;
+}
+.pricing_item1{
+    margin-left: 140px;
+}
+.pricing_item2{
+    margin: 0px 70px ;
+}
+.pricing_p1{
+    text-transform:capitalize ;
+    padding: 10px 0px 20px 0px;
+}
+.pricing_item::after,.news_item::after,.welcome_item:hover::after,.what_item:hover::after{
+    z-index: -1;
+}
+.pricing_circle{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin:auto ;
+    border: 2px solid rgb(253, 228, 182) ;
+    text-align: center;
+    padding: 15px 5px;
+}
+.pricing_item:hover .pricing_circle{
+    border-color:  rgb(235, 181, 82);
+}
+.pricing_p{
+    text-transform:capitalize ;
+    padding: 16px 0px;
+}
+.pricing_button{
+    width: 200px;
+    height: 40px;
+    border: 2px solid rgb(253, 228, 182) ;
+    border-radius: 12px;
+    background-color: rgb(197, 195, 195);
+}
+.pricing_item:hover .pricing_p1{
+    color:  rgb(244, 181, 64);
+}
+.pricing_item:hover .pricing_button{
+    background-color: white;
+}
+.engineers{
+    background-image: url(../images//luxury-glass-crystal-perfume-bottle-with-smoke-waves-ai_941600-15951.jpg);
+}
+.engineers_content{
+    width: 70%;
+}
+.engineers_item1 ,.engineers_item2{
+    width: 45%;
+    float: left;
+   padding: 25px 20px;
+}
+.engineers_item2{
+   margin-left: 10%;
+}
+.engineers_content,.engineers_item{
+    overflow: auto;
+}
+.engineers_img1 ,.engineers_img2{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    float: left;
+    background-size: cover;
+}
+.engineers_img1{
+    background-image:url(../images/Government-Business-Header-e1677600827469.jpeg)  ;
+}
+.engineers_img2{
+    background-image:url(../images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsX29mZmljZV8zNl9yZWFsaXN0aWNfcGhvdG9ncmFwaF9vZl9hX2NvbmZpZGVuY2VfdWFlX2J1c18xOTg4NTcwNy1iNDc3LTQyMjgtYTE2OC1lODk2ZmQxZWFiZTFfMS5qcGc.jpg);
+}
+.engineers_info{
+    text-transform: capitalize;
+    padding: 18px;
+    line-height: 35px;
+    float: left;
+}
+.engineers_p{
+    color: rgb(250, 167, 12);
+    font-size: 20px;
+}
+.engineers_P1{
+    text-transform: capitalize;
+    line-height: 33px;
+    padding: 8px 0px;
+    color: rgb(164, 158, 158);
+}
+.team_container,.news_container{
+    width:80%;
+    margin: auto;
+}
+.team_item{
+    background-color:rgb(211, 209, 209);
+    padding: 20px 15px;
+}
+.team_item,.news_item{
+    width: 30%;
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+}.news_item{
+    border:1px solid rgb(249, 224, 177) ;
+    padding: 20px 15px 0px 15px ;
+}
+.teamitem,.newsitem{
+    margin: 0px 5%;
+}
+.team_img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team_img img{
+    width: 100%;
+}
+.team_item:hover .team_overlay{
+    visibility: visible;
+}
+.team_a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(93, 93, 255);
+    font-size: 20px;
+    margin-left: auto;
+}
+.team_overlay .team_a .team_i{
+    line-height: 40px;
+}
+.team_title{
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+.team_p{
+    text-transform: uppercase;
+    color:rgb(51, 51, 51);
+    padding-top: 17px;
+}
+.team_item,.news_item{
+    position: relative;
+}
+.team_item:hover .team_p,.news_icon{
+    color:rgb(53, 53, 254);
+}
+.news_img{
+    width: 75%;
+    margin: auto;
+}
+.news_img img {
+    border-radius: 10px;
+    width: 100%;
+}
+.news_info{
+    margin: 25px 0px;
+}
+.news_span{
+    margin-right: 15px;
+}
+.news_title{
+    padding: 15px 0px;
+    text-transform: capitalize;
+}
+.news_a{
+    text-decoration: none;
+   padding-top: 20px;
+    display: block;
+}
+.news_item:hover .news_p{
+    color: rgb(192, 189, 189);
+}
+.news_p{
+    color: rgb(86, 86, 86);
+}
+.contact{
+    text-align: center;
+    padding: 20px 0px;
+}
+.contact img {
+    border-radius: 15px;
+}
+.contact_info{
+    padding: 20px 0px;
+}
+.contact_info a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    display: inline-block;
+}
+.contact_info a .contact_icon{
+    line-height: 60px;
+}
+.contact_p{
+    padding: 10px 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
